@@ -16,7 +16,7 @@ class Penguin implements Subject
     {
         foreach ($this->observerList as $key => $value) {
             if ($key === $observer) {
-                unset($value);
+                unset($this->observerList[$key]);
             }
         }
     }
